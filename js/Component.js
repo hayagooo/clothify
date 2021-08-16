@@ -38,7 +38,7 @@ Vue.component('list-product', {
     <div>
         <div class="col-md-3 col-6 product-list" v-for="(item, index) of product" :key="index">
             <div class="card-product">
-                <img :src="...." class="w-100 img-product" >
+                <img :src="'https://sidescriptdev.github.io/clothify/img/product/'+ productactive.toLowerCase()+ '/'+ item.gambar" class="w-100 img-product" >
                 <div class="product-detail position-relative">
                     <div
                         class="bg-dark text-warning bookmark px-2 py-1 position-absolute text-16 font-weight-bold rounded-circle ">
