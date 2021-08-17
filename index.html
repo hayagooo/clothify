@@ -50,7 +50,7 @@
         <div class="m-container bg-black-p jumbotron-home position-relative">
             <img src="img/Group 5.png" alt="" class="position-absolute d-none d-md-block">
             <div class="content row">
-                <div class="col-md-6 col-10 text-light pt-5 mb-5">
+                <div class="col-md-6 col-10 text-light pt-xl-5 pt-3  mb-5">
                     <h2 class="font-weight-bold col-10 p-0">Belanja Pakaian berkualitas dan murah di Clothify</h2>
                     <div class="bg-warning pt-2 rounded mb-4" style="width: 20%;"></div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto voluptatem ea cum quas,
@@ -67,7 +67,7 @@
         </div>
         <div class="m-container bg-black-s py-5 position-relative" id="about-us">
             <div class="row text-light">
-                <div class="quote col-xl-5 p-0 position-relative" style="overflow: hidden;">
+                <div class="quote col-xl-5 p-0 position-relative mb-5" style="overflow: hidden;">
                     <div class=" position-absolute p-2 px-4 box"></div>
                     <div class="photo" style="z-index: 2;">
                         <img src="img/undraw_educator_oxfm.svg" width="80" alt="">
@@ -90,15 +90,15 @@
         </div>
         <div class="m-container bg-black-p py-5" id="popular-product">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-xl-4 ">
                     <h3 class="title-section text-light">Popular Product</h3>
                     <div class="w-100 d-flex">
-                        <img src="img/Group 7.png" class=" mx-auto mt-5 w-100"  alt="">
+                        <img src="img/Group 7.png" class="img-popular mx-auto mt-5 w-100"  alt="">
                     </div>
                 </div>
-                <div class="col-xl-8 pt-5">
-                    <div class="100 pt-xl-5 pt-2 mt-xl-5 mt-0 position-relative" id="popular">
-                        <div class="box-card"  v-for="(item, index) of popular">
+                <div class="col-xl-8 pt-xl-5">
+                    <div class="100 pt-xl-5 pt-0  mt-5 position-relative" id="popular">
+                        <div class="box-card mt-5 mt-md-0"  v-for="(item, index) of popular">
                             <div class="card-popular position-relative">
                                 <h4 class="mb-0">{{item.nama}}</h4>
                                 <p>Merk lorem</p>
@@ -134,7 +134,7 @@
                 <div class="bg-warning p-1 mx-auto" style="width: 150px;"></div>
             </div>
             <div class="d-flex mt-5">
-               <div class="col-2 p-0">
+               <div class="col-md-2 col-3 p-0">
                 <button class="btn w-100 d-flex btn-warning text-left dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <span>{{productActive}}</span>
                     <span class="iconify ml-auto text-20" data-icon="bi:caret-down-fill"></span>
@@ -145,7 +145,7 @@
                   <div  class="dropdown-item" @click="changeProduct('Sepatu')" >Sepatu</div >
                 </div>
                </div>
-               <input type="text" @keyup.enter="search()" class="form-control col-md-3 col-8 ml-3" v-model="keyword" placeholder="Cari Nama Produk">
+               <input type="text" @keyup.enter="search()" class="form-control col-md-3 col-8 ml-auto ml-md-3" v-model="keyword" placeholder="Cari Nama Produk">
             </div>
             <template v-if="message != ''">
                 <h5 class="text-light text-center mt-5">{{message}}</h5>
@@ -161,7 +161,7 @@
                             </div>
                             <h5 class="product-name font-weight-bold">{{item.nama}}</h5>
                             <div class="product-price">
-                                Rp. {{item.harga}},00 
+                                Rp. {{item.harga}}.000,00 
                             </div>
                             <div class="d-flex product-info">
                                 <div>
@@ -189,8 +189,8 @@
                                 </div>
                                 <div class="modal-body">
                                     <div class="container-fluid">
-                                        <div class="row">
-                                            <div class="col-md-4 p-0">
+                                        <div class="row justify-content-center">
+                                            <div class="col-md-4 text-center mb-5 p-0">
                                                 <img :src="'img/product/'+ productActive + '/'+ item.gambar"
                                                     alt="">
                                             </div>
@@ -204,7 +204,7 @@
                                                     </div>
                                                     Subtotal Produk :
                                                     <h4 class="text-warning">
-                                                        Rp.{{qty * item.harga}},00
+                                                        Rp.{{qty * item.harga}}.000,00
                                                     </h4> 
                                                     <input type="hidden" >
                                                 </form>
@@ -213,8 +213,6 @@
                                     </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
                                 </div>
                             </div>
                         </div>
@@ -223,16 +221,16 @@
             </div>
         </div>
         <div class="m-container bg-black-p py-xl-5 py-4" id="contact-us">
-            <div class="row mt-xl-5 mt-0 pt-xl-3 pt-0 pb-5">
-                <div class="col-md-5 mb-5 justify-content-center row position-relative p-0">
-                   <div class="col-10 d-flex p-0 img-contact">
+            <div class="row mt-xl-5 mt-0 pt-xl-3 pt-0 pb-5 align-items-center">
+                <div class="col-md-5 col-sm-12  mb-5 justify-content-center row position-relative p-0 z-index-1"> 
+                   <div class="col-12 d-flex img-contact">
                     <img src="img/coffee.jpg" class="w-100" alt="">
                     <div class="position-absolute text-center w-100 d-flex justify-content-center align-items-center h-100 text-warning">
                         <span class="iconify" data-icon="ic:outline-contact-support"></span>
                     </div>
                    </div>
                 </div>
-                <div class="col-md-6 ml-xl-auto text-light ml-0">
+                <div class="col-md-6 col-sm-12  ml-xl-auto text-light ml-0 z-index-2">
                     <h3 class="mb-1">Contact Us</h3>
                     <div class="p-1 bg-warning col-3 mb-5 rounded"></div>
                     <list-contact></list-contact>

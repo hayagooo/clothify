@@ -344,6 +344,23 @@ html{
         padding-left: 2.5rem!important;
         padding-right: 2.5rem!important;
     }
+    .box-card{
+        padding: 0 20px;
+    }
+
+    .img-popular{
+        width: 60%!important;
+    }
+
+    .jumbotron-home .col-md-6{
+        flex: 0 0 100%;
+        max-width: 100%;
+
+    }
+
+    h2,h3{
+        font-size: 24px;
+    }
 }
 
 .WM {
