@@ -297,7 +297,9 @@ var app = new Vue({
         productActive: 'Baju',
         keyword: '',
         message: '',
-        popular: popular
+        popular: popular,
+        qty: 1,
+        from: 0,
 
     },
     methods: {
@@ -320,7 +322,19 @@ var app = new Vue({
                 this.message = 'Not Found'
                 this.product = []
             }
-
+        },
+        getThis: function (data) {
+            return data
+        },
+        totalQty: function (event) {
+            const value = event.target.value
+            const sisa = event.target.dataset.sisa
+            if (this.from < sisa) {
+                if (value >= 1) {
+                    this.qty = value
+                    this.from++
+                }
+            }
         }
 
     }
