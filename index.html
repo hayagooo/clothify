@@ -93,11 +93,11 @@
                 <div class="col-md-4">
                     <h3 class="title-section text-light">Popular Product</h3>
                     <div class="w-100 d-flex">
-                        <img src="img/Group 7.png" class=" mx-auto mt-5" width="300" alt="">
+                        <img src="img/Group 7.png" class=" mx-auto mt-5 w-100"  alt="">
                     </div>
                 </div>
                 <div class="col-xl-8 pt-5">
-                    <div class="w-100 pt-xl-5 pt-2 mt-xl-5 mt-0 " id="popular">
+                    <div class="100 pt-xl-5 pt-2 mt-xl-5 mt-0 position-relative" id="popular">
                         <div class="box-card"  v-for="(item, index) of popular">
                             <div class="card-popular position-relative">
                                 <h4 class="mb-0">{{item.nama}}</h4>
@@ -153,7 +153,7 @@
             <div class="row mt-5">
                 <div class="col-md-3 col-6 product-list" v-for="(item, index) of product" :key="index">
                     <div class="card-product">
-                        <img :src="'img/product/'+ item.gambar" class="w-100 img-product" >
+                        <img :src="'img/product/'+ productActive +'/'+item.gambar" class="w-100 img-product" >
                         <div class="product-detail position-relative">
                             <div
                                 class="bg-dark text-warning bookmark px-2 py-1 position-absolute text-16 font-weight-bold rounded-circle ">
@@ -282,12 +282,15 @@
                     slidesToScroll: 1,
                     infinite: true,
                 }
-            }]
-        })
-        $("#popular .slick-prev").addClass("btn btn-warning").html(
-            '<span class="iconify" data-icon="bi:caret-left"></span>')
-        $("#popular .slick-next").addClass("btn btn-warning").html(
-            '<span class="iconify" data-icon="bi:caret-right"></span>')
+            }],
+            prevArrow: `<button type="button" class="btn btn-warning position-absolute top-0 slick-prev btn-arrows " id="slick-prev">
+                        <span class="iconify" data-icon="bi:caret-left"></span>
+                    </button>`,
+            nextArrow:`<button type="button" class="btn btn-warning position-absolute top-0 slick-next btn-arrows " id="slick-prev">
+                <span class="iconify" data-icon="bi:caret-right"></span>
+            </button>`
+        })  
+        
     </script>
 </body>
 
